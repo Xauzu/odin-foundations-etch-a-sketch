@@ -3,8 +3,9 @@ function populate(width, height) {
     const grid = document.querySelector('.grid');
     
     // Empty Grid
-    while (grid.hasChildNodes)
+    while (grid.hasChildNodes()) {
         grid.removeChild(grid.lastChild);
+    }
 
     for(let i = 0; i < height; i++) {
         const row = document.createElement("div");
