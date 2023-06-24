@@ -25,7 +25,7 @@ function populate(width, height) {
 function changeDimension() {
     const newWidth = prompt("Enter a new Width", "16");
     const newHeight = prompt("Enter a new Height", "16");
-    populate(newWidth, newHeight);
+    populate(newWidth <= 100 ? newWidth : 100, newHeight <= 100 ? newHeight : 100);
 }
 
 // Initial Width, Height
