@@ -1,10 +1,10 @@
 html {
-    height: 90%
-}
-body {
+    height: 90%;
     margin: 0 0 0 0;
     border: 0;
+}
 
+body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -25,6 +25,8 @@ body {
     display: flex;
     flex: 1;
     flex-direction: column;
+    border: solid black;
+    margin: 5px;
 }
 
 .row {
