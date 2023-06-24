@@ -14,6 +14,7 @@ function populate() {
         }
         grid.appendChild(row);
     }
+    document.querySelector(".dimensionDisplay").textContent = gridWidth + " x " + gridHeight;
 }
 
 populate();
