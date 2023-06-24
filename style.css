@@ -1,3 +1,9 @@
 body {
     font-size: 36px;
+    display: flex;
+}
+
+grid {
+    margin: 0 0 0 0;
+    border: 0;
 }
