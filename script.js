@@ -1,3 +1,8 @@
+// Random int
+function getRandomInt(max) {
+    return Math.floor(Math.random() * (max + 1));
+}
+
 // Populate grid
 function populate(width, height) {
     const grid = document.querySelector('.grid');
@@ -13,7 +18,7 @@ function populate(width, height) {
 
         for (let j = 0; j < width; j++) {
             const cell = document.createElement("div");
-            cell.style.backgroundColor = "rgb(255, 255, 255)";
+            cell.style.backgroundColor = `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`;
             cell.classList.add("cell");
 
             // Event listener to change the background color of the cell
