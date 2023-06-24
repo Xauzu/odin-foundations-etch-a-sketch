@@ -13,7 +13,24 @@ function populate(width, height) {
 
         for (let j = 0; j < width; j++) {
             const cell = document.createElement("div");
+            cell.style.backgroundColor = "rgb(255, 255, 255)";
             cell.classList.add("cell");
+
+            // Event listener to change the background color of the cell
+            cell.addEventListener("mouseenter", () => {
+                let color = cell.style.backgroundColor.slice(4);
+                color = color.slice(0, color.length - 1);
+
+                // Get each rgb value as array
+                let rgb = color.split(', ');
+                for (let i = 0; i < rgb.length; i++) {
+                    rgb[i] = +rgb[i]; // Convert to int
+                    rgb[i] -= 26;
+                }
+
+                cell.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+            });
+
             row.appendChild(cell);
         }
         grid.appendChild(row);
