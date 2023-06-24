@@ -1,20 +1,20 @@
-const gridWidth = 16;
-const gridHeight = 16;
-
-function populate() {
+function populate(width, height) {
     const grid = document.querySelector('.grid');
-    for(let i = 0; i < gridHeight; i++) {
+    for(let i = 0; i < height; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
 
-        for (let j = 0; j < gridWidth; j++) {
+        for (let j = 0; j < width; j++) {
             const cell = document.createElement("div");
             cell.classList.add("cell");
             row.appendChild(cell);
         }
         grid.appendChild(row);
     }
-    document.querySelector(".dimensionDisplay").textContent = gridWidth + " x " + gridHeight;
+    document.querySelector(".dimensionDisplay").textContent = width + " x " + height;
 }
 
-populate();
+// Initial Width, Height
+const gridWidth = 16;
+const gridHeight = 16;
+populate(gridWidth, gridHeight);
